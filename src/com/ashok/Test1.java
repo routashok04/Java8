@@ -22,7 +22,7 @@ public class Test1 {
             System.out.println(integerListEntry.getKey() +"--------"+integerListEntry.getValue());
         });
 
-        //count allemployee Dusing each Dept
+        //count allemployee using each Dept
         Map<Integer, Long> empCountDept = emplist.stream().collect(Collectors.groupingBy(Employee::getDeptId, Collectors.counting()));
         empCountDept.entrySet().forEach(integerLongEntry -> {
             System.out.println(integerLongEntry.getKey() + "----" + integerLongEntry.getValue());
